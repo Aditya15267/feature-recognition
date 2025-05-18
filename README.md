@@ -34,7 +34,8 @@ This repo includes a **data generator** that:
 To generate data:
 
 ```bash
-python script/download_images.py
+python scripts/download_images.py
+python scripts/generate_fake_labels.py
 ```
 
 ## Setup & Training
