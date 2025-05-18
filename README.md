@@ -41,8 +41,8 @@ python script/download_images.py
 
 1. Clone this repository:
     ```sh
-        git clone https://github.com/Aditya15267/feature-recognition.git
-        cd furniture-query-parse
+    git clone https://github.com/Aditya15267/feature-recognition.git
+    cd furniture-query-parse
     ```
 
 2. Install dependencies
@@ -80,3 +80,32 @@ Sample output:
   ]
 }
 ```
+
+## Design Notes
+
+This project is designed for modularity, scalability, and extensibility. Key architectural decisions include:
+
+1. Multi-Label Classification Setup
+
+- Each image is mapped to multiple independent feature categories.
+- A shared CNN backbone (ResNet-50) is used for feature extraction.
+- Each feature category has its own classification head.
+- Allows independent learning signals per label group.
+
+2. Label Handling
+
+- Feature categories and label options are loaded from a JSON schema (feature_schema.json).
+- Dynamic label encoders are built at runtime to support any number of categories.
+
+3. Data Generator
+
+- Since no real dataset was provided, a data generator builds fake image-label pairs.
+- Images are pulled from online sources.
+- Features are randomly assigned from the schema to simulate label diversity.
+
+4. Prediction Output Format
+
+- Inference returns structured JSON output:
+    - Per-feature prediction
+    - Confidence scores
+    - Overall average confidence
