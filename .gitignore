@@ -1,0 +1,59 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*.so
+*.ipynb_checkpoints/
+
+# Environment files
+.env
+.venv/
+venv/
+ENV/
+env.bak/
+env/
+
+# Package directories
+*.egg-info/
+dist/
+build/
+
+# Checkpoints and model weights
+checkpoints/
+*.pth
+*.pt
+*.h5
+
+# Logs and outputs
+logs/
+*.log
+*.out
+*.err
+
+# Data
+data/images/*
+
+
+# Jupyter notebooks (optional)
+*.ipynb
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VSCode settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# Inference outputs
+inference_results/
+output/
+outputs/
+output.json
+test_predictions.json
+
+# Misc
+*.tar.gz
+*.zip
+*.tmp
